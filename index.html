@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071426">
+<meta name="description" content="Trincomalee Kingstars Chess Academy">
+<title>Trincomalee Kingstars Chess Academy</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<header class="header">
+<div class="container nav-container">
+
+<a href="#home" class="logo">
+<img src="icons/logo.png" alt="Kingstars Chess Academy Logo">
+<span>
+Trincomalee Kingstars
+<small>Chess Academy</small>
+</span>
+</a>
+
+<nav class="navigation" id="navigation">
+<a href="#home">Home</a>
+<a href="#learn">Learn Chess</a>
+<a href="#puzzles">Puzzles</a>
+<a href="#tournaments">Tournaments</a>
+<a href="#academy">Academy</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<button class="menu-button" id="menuButton">☰</button>
+
+</div>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+<div class="container hero-content">
+
+<div class="hero-text">
+
+<p class="welcome">WELCOME TO</p>
+
+<h1>
+Trincomalee Kingstars
+<span>Chess Academy</span>
+</h1>
+
+<p class="tagline">
+Every move shapes the mind.<br>
+Shaping futures through Chess.
+</p>
+
+<p class="description">
+Welcome to Trincomalee Kingstars Chess Academy.
+Learn chess, improve your skills, solve puzzles and become a stronger player.
+</p>
+
+<div class="hero-buttons">
+<a href="#learn" class="btn primary">Learn Chess</a>
+<a href="#puzzles" class="btn secondary">Play Puzzles</a>
+</div>
+
+</div>
+
+<div class="chess-logo">
+<img src="icons/logo.png" alt="Kingstars Chess Academy Logo">
+</div>
+
+</div>
+</section>
+
+
+<section class="quick-section">
+<div class="container">
+
+<h2>Start Your Chess Journey</h2>
+
+<div class="quick-grid">
+
+<a href="#learn" class="feature-card">
+<span>♟️</span>
+<h3>Learn Chess</h3>
+<p>Learn chess from the basics.</p>
+</a>
+
+<a href="#puzzles" class="feature-card">
+<span>🧩</span>
+<h3>Chess Puzzles</h3>
+<p>Test your tactical skills.</p>
+</a>
+
+<a href="#tournaments" class="feature-card">
+<span>🏆</span>
+<h3>Tournaments</h3>
+<p>Explore upcoming tournaments.</p>
+</a>
+
+<a href="#academy" class="feature-card">
+<span>🎓</span>
+<h3>Our Academy</h3>
+<p>Discover our chess academy.</p>
+</a>
+
+</div>
+</div>
+</section>
+
+
+<section id="learn" class="content-section">
+<div class="container">
+
+<h2>Learn Chess</h2>
+
+<p>Select a chess piece to learn how it moves.</p>
+
+<div class="lesson-grid">
+
+<button class="lesson-card" data-piece="king">
+<span>♔</span>
+<h3>King</h3>
+<p>Learn how the King moves.</p>
+</button>
+
+<button class="lesson-card" data-piece="queen">
+<span>♕</span>
+<h3>Queen</h3>
+<p>Learn Queen movement.</p>
+</button>
+
+<button class="lesson-card" data-piece="rook">
+<span>♖</span>
+<h3>Rook</h3>
+<p>Learn Rook movement.</p>
+</button>
+
+<button class="lesson-card" data-piece="bishop">
+<span>♗</span>
+<h3>Bishop</h3>
+<p>Learn diagonal movement.</p>
+</button>
+
+<button class="lesson-card" data-piece="knight">
+<span>♘</span>
+<h3>Knight</h3>
+<p>Learn Knight movement.</p>
+</button>
+
+<button class="lesson-card" data-piece="pawn">
+<span>♙</span>
+<h3>Pawn</h3>
+<p>Learn Pawn movement.</p>
+</button>
+
+</div>
+
+<div class="lesson-result" id="lessonResult">
+
+<div class="lesson-result-icon" id="lessonIcon">♟️</div>
+
+<h3 id="lessonTitle">Select a Chess Piece</h3>
+
+<p id="lessonText">
+Click on any chess piece to learn how it moves.
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="puzzles" class="content-section dark-section">
+
+<div class="container">
+
+<h2>Chess Puzzles</h2>
+
+<p>
+Improve your tactical thinking with interactive chess puzzles.
+</p>
+
+<div class="puzzle-menu">
+
+<button class="puzzle-type active" data-puzzle="mate1">
+♟️ Mate in 1
+</button>
+
+<button class="puzzle-type" data-puzzle="mate2">
+♟️ Mate in 2
+</button>
+
+</div>
+
+
+<div id="mate1" class="puzzle-container">
+
+<div class="puzzle-header">
+
+<h3>Mate in 1</h3>
+
+<p>Find the checkmate in one move.</p>
+
+</div>
+
+
+<div class="puzzle-navigation">
+
+<button id="previousPuzzle" class="puzzle-nav-button">
+⬅ Previous
+</button>
+
+<div class="puzzle-counter">
+Puzzle
+<strong id="puzzleNumber">1</strong>
+/
+<strong id="totalPuzzles">100</strong>
+</div>
+
+<button id="nextPuzzle" class="puzzle-nav-button">
+Next ➡
+</button>
+
+</div>
+
+
+<div class="progress-container">
+
+<div class="progress-bar">
+<div id="progressBar" class="progress-fill"></div>
+</div>
+
+<p id="progressText">
+Puzzle 1 of 100
+</p>
+
+</div>
+
+
+<div class="puzzle-score">
+
+<span>
+Score:
+<strong id="score">0</strong>
+</span>
+
+<span>
+Solved:
+<strong id="solvedCount">0</strong>
+</span>
+
+</div>
+
+
+<div class="chess-board" id="chessBoard"></div>
+
+
+<div class="puzzle-result" id="puzzleResult">
+Select a piece and make your move.
+</div>
+
+
+<div class="puzzle-actions">
+
+<button class="btn secondary" id="restartPuzzle">
+🔄 Restart
+</button>
+
+<button class="btn primary" id="nextPuzzleBottom">
+Next Puzzle ➡
+</button>
+
+</div>
+
+</div>
+
+
+<div id="mate2" class="puzzle-container hidden">
+
+<div class="coming-soon">
+
+<div>♟️</div>
+
+<h3>Mate in 2</h3>
+
+<p>
+100 Mate in 2 interactive puzzles are coming soon.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="tournaments" class="content-section">
+
+<div class="container">
+
+<h2>Upcoming Tournaments</h2>
+
+<div class="empty-card">
+
+<span>🏆</span>
+
+<h3>Tournament News Coming Soon</h3>
+
+<p>
+Upcoming tournaments and chess events will be displayed here.
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="academy" class="content-section dark-section">
+
+<div class="container">
+
+<h2>About Our Academy</h2>
+
+<p>
+Trincomalee Kingstars Chess Academy is dedicated to developing chess skills,
+logical thinking, discipline and confidence through chess education.
+</p>
+
+<div class="academy-features">
+
+<div>
+♟️
+<h3>Chess Skills</h3>
+<p>Build strong chess fundamentals.</p>
+</div>
+
+<div>
+🧠
+<h3>Logical Thinking</h3>
+<p>Develop problem-solving skills.</p>
+</div>
+
+<div>
+🏆
+<h3>Competition</h3>
+<p>Prepare for chess tournaments.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="contact" class="content-section">
+
+<div class="container">
+
+<h2>Contact Us</h2>
+
+<p>
+Contact Trincomalee Kingstars Chess Academy
+for chess training and tournament information.
+</p>
+
+<button class="btn primary" id="contactButton">
+Contact Academy
+</button>
+
+<div class="contact-message" id="contactMessage">
+📞 Contact information will be added soon.
+</div>
+
+</div>
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+<p>© 2026 Trincomalee Kingstars Chess Academy</p>
+
+<p>Every move shapes the mind.</p>
+
+</div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+window.addEventListener("load", () => {
+navigator.serviceWorker.register("./sw.js")
+.then(() => console.log("Kingstars Chess Academy PWA Ready"))
+.catch(error => console.error("Service Worker Error:", error));
+});
+}
+</script>
+
+</body>
+</html>
